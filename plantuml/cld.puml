@@ -1,0 +1,35 @@
+@startuml
+
+class FacilityManager {
+    + long: id
+    * String: firstName
+    * String: lastName
+    * double: salary
+}
+
+class Building {
+    + long: id
+    * String: typeOfBuilding
+    * int: surface
+}
+
+class Room {
+    + long: id
+    * boolean: used
+    * int: surface
+    * boolean: repairNeeded
+}
+
+class Repairing {
+    + long: id
+    * String: typeOfRepair
+    * String[]: toolsNeeded
+    * double: fixingTime
+}
+
+FacilityManager "1" --* Building
+Building "1" --* Room
+Room "1" --o Repairing
+FacilityManager "1" --o Repairing
+
+@enduml
