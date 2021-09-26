@@ -1,27 +1,27 @@
 @startuml
 
 class FacilityManager {
-    + long: id
+    + Long: id
     * String: firstName
     * String: lastName
     * double: salary
 }
 
 class Building {
-    + long: id
+    + Long: id
     * String: typeOfBuilding
     * int: surface
 }
 
 class Room {
-    + long: id
+    + Long: id
     * boolean: used
     * int: surface
     * boolean: repairNeeded
 }
 
 class Repairing {
-    + long: id
+    + Long: id
     * String: typeOfRepair
     * String[]: toolsNeeded
     * double: fixingTime
