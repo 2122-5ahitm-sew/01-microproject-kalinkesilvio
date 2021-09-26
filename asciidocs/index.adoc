@@ -1,0 +1,3 @@
+## Class-diagram:
+
+plantuml::plantuml/cld.puml[]
