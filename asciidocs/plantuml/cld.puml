@@ -15,21 +15,21 @@ class Building {
 
 class Room {
     + Long: id
+    * String: usage;
     * boolean: used
     * int: surface
-    * boolean: repairNeeded
 }
 
-class Repairing {
+class Repair {
     + Long: id
-    * String: typeOfRepair
-    * String[]: toolsNeeded
+    * String: typeOfDamage
+    * String: description
     * double: fixingTime
 }
 
 FacilityManager "1" --* Building
 Building "1" --* Room
-Room "1" --o Repairing
-FacilityManager "1" --o Repairing
+Room "1" --o Repair
+FacilityManager "1" --o Repair
 
 @enduml
