@@ -8,4 +8,4 @@ in which room, how big the damage is and what's damaged.
 
 ## Class-diagram:
 
-![image of CLD](./asciidocs/images/cld.png) 
+![](asciidocs/images/cld.png)

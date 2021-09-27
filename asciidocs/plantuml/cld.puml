@@ -27,9 +27,9 @@ class Repair {
     * double: fixingTime
 }
 
-FacilityManager "1" --* Building
-Building "1" --* Room
-Room "1" --o Repair
-FacilityManager "1" --o Repair
+FacilityManager "1" -- "*" Building : work at >
+Building "1" -- "*" Room : has >
+Room "1" -- "0..*" Repair : may need >
+FacilityManager "1" -- "0..*" Repair : has to >
 
 @enduml
