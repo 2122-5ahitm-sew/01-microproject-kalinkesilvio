@@ -23,11 +23,12 @@ public class Room {
     public Room() {
     }
 
-    public Room(Long id, String usage, boolean used, int surface) {
+    public Room(Long id, String usage, boolean used, int surface, Building building) {
         this.id = id;
         this.usage = usage;
         this.used = used;
         this.surface = surface;
+        this.building = building;
     }
 
     public Long getId() {
@@ -60,6 +61,14 @@ public class Room {
 
     public void setSurface(int surface) {
         this.surface = surface;
+    }
+
+    public Building getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
     }
 
     @Override

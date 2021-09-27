@@ -27,11 +27,13 @@ public class Repair {
     public Repair() {
     }
 
-    public Repair(Long id, String typeOfRepair, String description, double fixingTime) {
+    public Repair(Long id, String typeOfRepair, String description, double fixingTime, Room room, FacilityManager facilityManager) {
         this.id = id;
         this.typeOfRepair = typeOfRepair;
         this.description = description;
         this.fixingTime = fixingTime;
+        this.room = room;
+        this.facilityManager = facilityManager;
     }
 
     public Long getId() {
@@ -64,6 +66,22 @@ public class Repair {
 
     public void setFixingTime(double fixingTime) {
         this.fixingTime = fixingTime;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public FacilityManager getFacilityManager() {
+        return facilityManager;
+    }
+
+    public void setFacilityManager(FacilityManager facilityManager) {
+        this.facilityManager = facilityManager;
     }
 
     @Override

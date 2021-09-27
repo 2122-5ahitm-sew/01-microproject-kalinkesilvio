@@ -22,10 +22,11 @@ public class Building {
     public Building() {
     }
 
-    public Building(Long id, String typeOfBuilding, int surface) {
+    public Building(Long id, String typeOfBuilding, int surface, FacilityManager facilityManager) {
         this.id = id;
         this.typeOfBuilding = typeOfBuilding;
         this.surface = surface;
+        this.facilityManager = facilityManager;
     }
 
     public Long getId() {
@@ -50,6 +51,14 @@ public class Building {
 
     public void setSurface(int surface) {
         this.surface = surface;
+    }
+
+    public FacilityManager getFacilityManager() {
+        return facilityManager;
+    }
+
+    public void setFacilityManager(FacilityManager facilityManager) {
+        this.facilityManager = facilityManager;
     }
 
     @Override
