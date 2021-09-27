@@ -8,4 +8,4 @@ in which room, how big the damage is and what's damaged.
 
 ## Class-diagram:
 
-![](OneDrive/Desktop/01-microproject-kalinkesilvio/asciidocs/images/cld.png)
+![cld](../asciidocs/images/cld.png)
