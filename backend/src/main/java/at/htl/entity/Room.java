@@ -1,9 +1,9 @@
 package at.htl.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
+import javax.persistence.*;
 
 @Entity
 public class Room {
@@ -15,6 +15,10 @@ public class Room {
     private String usage;
     private boolean used;
     private int surface;
+
+    @ManyToOne
+    @Cascade(CascadeType.ALL)
+    private Building building;
 
     public Room() {
     }

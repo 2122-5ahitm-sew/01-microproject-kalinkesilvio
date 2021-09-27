@@ -1,9 +1,9 @@
 package at.htl.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
+import javax.persistence.*;
 
 @Entity
 public class Repair {
@@ -15,6 +15,14 @@ public class Repair {
     private String typeOfRepair;
     private String description;
     private double fixingTime;
+
+    @ManyToOne
+    @Cascade(CascadeType.ALL)
+    private Room room;
+
+    @ManyToOne
+    @Cascade(CascadeType.ALL)
+    private FacilityManager facilityManager;
 
     public Repair() {
     }
