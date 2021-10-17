@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  postgres-dev:
+    image: postgres:latest
+    container_name: microproject-facility-management-db
+    environment:
+      POSTGRES_PASSWORD: app
+      POSTGRES_USER: app
+      POSTGRES_DB: db
+    ports:
+      - 5434:5432
