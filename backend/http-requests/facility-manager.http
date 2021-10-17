@@ -13,3 +13,14 @@ Content-Type: application/json
   "surface": 160,
   "typeOfBuilding": "school"
 }
+
+###
+
+PUT http://localhost:8080/building
+Content-Type: application/json
+
+{
+  "id": 1,
+  "surface": 160,
+  "typeOfBuilding": "primary-school"
+}
