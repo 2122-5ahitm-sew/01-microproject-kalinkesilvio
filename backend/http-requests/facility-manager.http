@@ -1,0 +1,5 @@
+GET http://localhost:8080/building/all
+
+###
+
+GET http://localhost:8080/building/1
