@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class BuildingRepository implements PanacheRepository<Building> {
 
     @Transactional
-    public void create(Building building) {
+    public void save(Building building) {
         persist(building);
     }
 
