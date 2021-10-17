@@ -6,7 +6,7 @@ import org.hibernate.annotations.CascadeType;
 import javax.persistence.*;
 
 @Entity
-public class Repair {
+public class Issue {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,11 +24,10 @@ public class Repair {
     @Cascade(CascadeType.ALL)
     private FacilityManager facilityManager;
 
-    public Repair() {
+    public Issue() {
     }
 
-    public Repair(Long id, String typeOfRepair, String description, double fixingTime, Room room, FacilityManager facilityManager) {
-        this.id = id;
+    public Issue(String typeOfRepair, String description, double fixingTime, Room room, FacilityManager facilityManager) {
         this.typeOfRepair = typeOfRepair;
         this.description = description;
         this.fixingTime = fixingTime;
@@ -38,10 +37,6 @@ public class Repair {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getTypeOfRepair() {

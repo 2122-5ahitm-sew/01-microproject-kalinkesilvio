@@ -19,8 +19,7 @@ public class FacilityManager {
     public FacilityManager() {
     }
 
-    public FacilityManager(Long id, String firstName, String lastName, double salary) {
-        this.id = id;
+    public FacilityManager(String firstName, String lastName, double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
@@ -28,10 +27,6 @@ public class FacilityManager {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getFirstName() {

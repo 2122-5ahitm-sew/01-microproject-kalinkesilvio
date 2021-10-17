@@ -23,8 +23,7 @@ public class Room {
     public Room() {
     }
 
-    public Room(Long id, String usage, boolean used, int surface, Building building) {
-        this.id = id;
+    public Room(String usage, boolean used, int surface, Building building) {
         this.usage = usage;
         this.used = used;
         this.surface = surface;
@@ -33,10 +32,6 @@ public class Room {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getUsage() {
