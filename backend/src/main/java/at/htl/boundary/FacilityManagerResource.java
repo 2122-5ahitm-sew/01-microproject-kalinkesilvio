@@ -33,4 +33,14 @@ public class FacilityManagerResource {
     public Response getAll() {
         return Response.ok(facilityManagerRepository.getAll()).build();
     }
+
+    @GET
+    @Path("/{id}")
+    public Response getById(@PathParam("id") Long id, @Context UriInfo uriInfo) {
+        return Response.created(
+                URI.create(uriInfo.getPath() + "/"
+                        + facilityManagerRepository.getFacilityManagerById(id).getId()
+                )
+        ).build();
+    }
 }
