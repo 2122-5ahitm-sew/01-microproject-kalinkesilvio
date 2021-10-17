@@ -3,3 +3,13 @@ GET http://localhost:8080/building/all
 ###
 
 GET http://localhost:8080/building/1
+
+###
+
+POST http://localhost:8080/building
+Content-Type: application/json
+
+{
+  "surface": 160,
+  "typeOfBuilding": "school"
+}
