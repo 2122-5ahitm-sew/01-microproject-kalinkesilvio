@@ -24,3 +24,7 @@ Content-Type: application/json
   "surface": 160,
   "typeOfBuilding": "primary-school"
 }
+
+###
+
+DELETE http://localhost:8080/building/1
