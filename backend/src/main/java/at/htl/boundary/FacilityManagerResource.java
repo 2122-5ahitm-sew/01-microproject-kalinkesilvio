@@ -43,4 +43,13 @@ public class FacilityManagerResource {
                 )
         ).build();
     }
+
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response update(FacilityManager facilityManager, @Context UriInfo uriInfo) {
+        facilityManagerRepository.create(facilityManager);
+        return Response
+                .created(URI.create(uriInfo.getPath() + "/" + facilityManager.getId()))
+                .build();
+    }
 }
