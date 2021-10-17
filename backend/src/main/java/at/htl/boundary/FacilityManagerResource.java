@@ -6,6 +6,7 @@ import at.htl.entity.Building;
 import at.htl.entity.FacilityManager;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -51,5 +52,13 @@ public class FacilityManagerResource {
         return Response
                 .created(URI.create(uriInfo.getPath() + "/" + facilityManager.getId()))
                 .build();
+    }
+
+    @DELETE
+    @Path("{id}")
+    @Transactional
+    public Response delete(@PathParam("id") long id) {
+        facilityManagerRepository.remove(facilityManagerRepository.getFacilityManagerById(id));
+        return Response.ok().build();
     }
 }
