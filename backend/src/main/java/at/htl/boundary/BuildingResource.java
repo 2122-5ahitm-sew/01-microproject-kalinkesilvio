@@ -28,8 +28,19 @@ public class BuildingResource {
     }
 
     @GET
+    @Path("/{id}")
+    public Response getById(@PathParam("id") Long id, @Context UriInfo uriInfo) {
+        return Response.created(
+                URI.create(uriInfo.getPath() + "/"
+                        + buildingRepository.getBuildingById(id).getId()
+                )
+        ).build();
+    }
+
+    @GET
     @Path("all")
     public Response getAll() {
         return Response.ok(buildingRepository.getAll()).build();
     }
+
 }
